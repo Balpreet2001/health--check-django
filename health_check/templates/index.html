@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>health prediction</title>
+  </head>
+  <body>
+     <h1>Diabetes prediction</h1>
+     {% if result %}
+          <h1>you are {{result}}</h1>
+     {% endif %}
+     <form action ="" method="POST">
+          {% csrf_token %}
+          Pregnancies : <input type = "number" name = "Pregnancies"><br>
+          Glucose : <input type = "number" name = "Glucose"><br>
+          BloodPressure : <input type = "number" name = "BloodPressure"><br>
+          SkinThickness : <input type = "number" name = "SkinThickness"><br>
+          Insulin : <input type = "number" name = "Insulin"><br>
+          bmi : <input type = "number" name = "bmi"><br>
+          DiabetesPedigreeFunction : <input type = "number" name = "DiabetesPedigreeFunction"><br>
+          Age : <input type = "number" name = "Age"><br>
+          <input type = "submit">
+     </form> 
+  </body>
+</html>
